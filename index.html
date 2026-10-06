@@ -6,7 +6,11 @@
 <meta name="robots" content="noindex">
 <title>Dynamic Netsoft (DNT) | Microsoft Dynamics 365 Partner and ISV in the UAE &amp; KSA</title>
 <meta name="description" content="Dynamic Netsoft (DNT) is a Microsoft Dynamics 365 partner and ISV building products for real estate, construction and finance teams in the UAE, KSA and the Middle East.">
-<meta name="theme-color" content="#0f6cbd">
+<meta name="theme-color" content="#0b1f33">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -80,7 +84,7 @@
       "name": "AXOnePay",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Microsoft Dynamics 365 Finance and Operations",
-      "description": "Payment processing connected to Microsoft Dynamics 365.",
+      "description": "Payroll for Microsoft Dynamics 365 Finance and Operations, covering payroll processing, compensation and benefits, and the employee lifecycle.",
       "publisher": { "@id": "https://www.dnetsoft.com/#organization" }
     },
     {
@@ -118,52 +122,63 @@
 
 <style>
   :root {
-    --blue-900: #0b2545;
-    --blue-800: #103a6b;
-    --blue-700: #0f548c;
-    --blue-600: #0f6cbd;   /* primary – 5.3:1 on white */
-    --blue-100: #e8f1fb;
-    --blue-50:  #f3f8fd;
-    --ink:      #1b1f24;   /* body text */
-    --ink-soft: #4a5260;   /* secondary text – 7.6:1 on white */
-    --line:     #d6dce4;
-    --grey-box: #eef1f5;
-    --white:    #ffffff;
-    --verify-bg:#fff4ce;
-    --verify-ink:#6b4e00;
-    --radius: 8px;
-    --max: 1180px;
-    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Arabic", sans-serif;
+    --ink:       #0b1f33;  /* primary text + dark surfaces */
+    --ink-2:     #3d4b59;  /* secondary text, 8.4:1 on paper */
+    --ink-3:     #5d6873;  /* captions, 5.4:1 on paper */
+    --paper:     #f7f5f0;  /* off-white page */
+    --white:     #ffffff;
+    --sand:      #c8a15a;  /* accent: rules, marks, text on ink only */
+    --sand-deep: #7d5c1f;  /* accent as text on light, 5.6:1 on paper */
+    --sand-tint: #efe6d3;
+    --line:      #e2dccf;
+    --line-ink:  rgba(247, 245, 240, .18);
+    --ok:        #2f6b4f;
+    --warn:      #85500f;
+    --verify-bg: #fbecc4;
+    --verify-ink:#5e4507;
+
+    --serif: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --arabic: "Noto Naskh Arabic", "Geeza Pro", "Segoe UI", Tahoma, serif;
+    --max: 1200px;
   }
 
   *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
   body {
     margin: 0;
-    font-family: var(--font);
+    font-family: var(--sans);
     font-size: 1rem;
     line-height: 1.6;
     color: var(--ink);
-    background: var(--white);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
   }
 
-  img, svg { max-width: 100%; display: block; }
-  a { color: var(--blue-600); }
-  a:hover { color: var(--blue-700); }
-  :focus-visible { outline: 3px solid #ffb900; outline-offset: 2px; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--sand-deep); outline-offset: 3px; }
 
-  h1, h2, h3 { line-height: 1.25; margin: 0 0 .5em; color: var(--blue-900); }
-  h1 { font-size: clamp(1.75rem, 5vw, 2.9rem); font-weight: 700; letter-spacing: -.01em; }
-  h2 { font-size: clamp(1.4rem, 3.4vw, 2rem); font-weight: 700; }
-  h3 { font-size: 1.15rem; font-weight: 600; }
+  h1, h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: -.02em;
+    line-height: 1.02;
+    margin: 0 0 .4em;
+  }
+  h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.35; margin: 0 0 .5em; letter-spacing: -.005em; }
   p  { margin: 0 0 1em; }
+  em.serif { font-family: var(--serif); font-style: italic; font-weight: 400; }
 
-  .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 1rem; }
-  section { padding: 3.5rem 0; }
-  .section-intro { max-width: 46rem; color: var(--ink-soft); margin-bottom: 2rem; }
-  .eyebrow { display: inline-block; font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--blue-600); margin-bottom: .5rem; }
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+  section { padding: 4.5rem 0; }
+  .bg-white { background: var(--white); }
+  .bg-paper { background: var(--paper); }
+  .bg-ink   { background: var(--ink); color: var(--paper); }
+
+  .lede { font-size: 1.125rem; color: var(--ink-2); max-width: 36rem; }
+  .rule { width: 48px; height: 2px; background: var(--sand); border: 0; margin: 0 0 1.5rem; }
 
   .visually-hidden {
     position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -173,183 +188,307 @@
   .skip-link:focus { left: 1rem; top: 1rem; }
 
   .verify {
-    display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .04em;
-    background: var(--verify-bg); color: var(--verify-ink);
-    padding: .05rem .4rem; border-radius: 4px; vertical-align: middle;
+    display: inline-block; font-family: var(--sans); font-size: .68rem; font-weight: 600;
+    letter-spacing: .03em; background: var(--verify-bg); color: var(--verify-ink);
+    padding: .1rem .4rem; border-radius: 3px; vertical-align: middle; line-height: 1.4;
   }
 
-  /* Buttons */
+  /* Buttons and text links */
   .btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
-    min-height: 44px; padding: .7rem 1.4rem; border-radius: 4px;
-    font: inherit; font-weight: 600; text-decoration: none; cursor: pointer;
-    border: 2px solid transparent; transition: background-color .15s, color .15s, border-color .15s;
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 48px; padding: .75rem 1.5rem; border-radius: 2px;
+    font: 500 1rem/1 var(--sans); text-decoration: none; cursor: pointer;
+    border: 1px solid var(--ink); transition: background-color .15s, color .15s;
   }
-  .btn-primary { background: var(--blue-600); color: var(--white); }
-  .btn-primary:hover { background: var(--blue-700); color: var(--white); }
-  .btn-secondary { background: transparent; color: var(--white); border-color: var(--white); }
-  .btn-secondary:hover { background: var(--white); color: var(--blue-900); }
-  .btn-outline { background: transparent; color: var(--blue-600); border-color: var(--blue-600); }
-  .btn-outline:hover { background: var(--blue-600); color: var(--white); }
+  .btn-solid { background: var(--ink); color: var(--paper); }
+  .btn-solid:hover { background: #17344f; }
+  .btn-line { background: transparent; color: var(--ink); }
+  .btn-line:hover { background: var(--ink); color: var(--paper); }
+  .text-link {
+    font-weight: 500; text-decoration: none; color: var(--ink);
+    border-bottom: 1px solid var(--sand); padding-bottom: 2px;
+  }
+  .text-link:hover { border-bottom-color: var(--ink); }
 
   /* Header */
-  .site-header { background: var(--white); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
-  .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 1rem; }
-  .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--blue-900); font-weight: 700; }
-  .brand-mark {
-    width: 36px; height: 36px; border-radius: 6px; background: var(--blue-600); color: var(--white);
-    display: grid; place-items: center; font-size: .85rem; letter-spacing: .02em;
-  }
-  .brand-name small { display: block; font-weight: 400; font-size: .75rem; color: var(--ink-soft); }
+  .site-header { background: var(--paper); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
+  .header-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; min-height: 68px; gap: 0 1rem; }
+  .brand { display: flex; align-items: baseline; gap: .6rem; text-decoration: none; }
+  .brand-mark { font-family: var(--serif); font-size: 1.75rem; line-height: 1; color: var(--ink); }
+  .brand-mark span { color: var(--sand-deep); }
+  .brand-name { font-size: .85rem; font-weight: 500; color: var(--ink-2); }
   .nav-toggle {
-    display: inline-flex; align-items: center; gap: .4rem; min-height: 44px; padding: 0 .9rem;
-    background: transparent; border: 1px solid var(--line); border-radius: 4px; font: inherit; color: var(--ink); cursor: pointer;
+    min-height: 44px; padding: 0 1rem; background: transparent; border: 1px solid var(--line);
+    border-radius: 2px; font: 500 .9rem var(--sans); color: var(--ink); cursor: pointer;
   }
   .site-nav { display: none; width: 100%; }
   .site-nav.is-open { display: block; }
-  .site-nav ul { list-style: none; margin: 0; padding: .5rem 0 1rem; }
-  .site-nav a { display: block; padding: .65rem 0; color: var(--ink); text-decoration: none; font-weight: 500; }
-  .site-nav a:hover { color: var(--blue-600); }
-  .header-inner { flex-wrap: wrap; }
+  .site-nav ul { list-style: none; margin: 0; padding: .25rem 0 1rem; }
+  .site-nav a { display: block; padding: .7rem 0; text-decoration: none; font-size: .95rem; color: var(--ink-2); border-top: 1px solid var(--line); }
+  .site-nav a:hover { color: var(--ink); }
   .nav-cta { display: none; }
 
   /* Hero */
-  .hero {
-    background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-800) 60%, var(--blue-700) 100%);
-    color: var(--white); padding: 4rem 0 4.5rem;
+  .hero { padding: 3rem 0 3.5rem; background: var(--paper); }
+  .hero-grid { display: grid; gap: 2.5rem; align-items: center; }
+  .hero h1 { font-size: clamp(2.6rem, 8.5vw, 4.6rem); max-width: 14ch; margin-bottom: .3em; }
+  .hero h1 em { color: var(--sand-deep); }
+  .tagline-ar {
+    font-family: var(--arabic); font-size: 1.15rem; line-height: 1.8; color: var(--ink-2);
+    margin: 0 0 1.25rem; padding-inline-start: .9rem; border-inline-start: 2px solid var(--sand);
+    text-align: right;
   }
-  .hero h1 { color: var(--white); max-width: 22ch; }
-  .hero .subline { font-size: 1.125rem; color: #dbe7f5; max-width: 40rem; margin-bottom: 2rem; }
-  .hero-actions { display: flex; flex-direction: column; gap: .75rem; }
-  .hero-note { margin-top: 1.5rem; font-size: .9rem; color: #c3d5ea; }
+  .hero .lede { margin-bottom: 2rem; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
 
-  /* Logo bar */
-  .logos { padding: 2rem 0; border-bottom: 1px solid var(--line); }
-  .logos-label { text-align: center; color: var(--ink-soft); font-size: .9rem; margin-bottom: 1rem; }
-  .logo-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; }
-  .logo-grid li {
-    background: var(--grey-box); border-radius: var(--radius); min-height: 64px;
-    display: grid; place-items: center; color: var(--ink-soft); font-size: .85rem;
+  /* Browser-frame mockup */
+  .browser {
+    margin: 0; background: var(--white); border: 1px solid #d5cebf; border-radius: 10px; overflow: hidden;
+    box-shadow: 0 30px 60px -30px rgba(11, 31, 51, .35);
+    font-size: .75rem; color: var(--ink);
+  }
+  .browser-bar { display: flex; align-items: center; gap: .75rem; padding: .6rem .8rem; background: #efece5; border-bottom: 1px solid var(--line); }
+  .dots { display: flex; gap: 5px; }
+  .dots i { width: 9px; height: 9px; border-radius: 50%; background: #cfc8b9; display: block; }
+  .url { flex: 1; background: var(--white); border: 1px solid var(--line); border-radius: 4px; padding: .2rem .6rem; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  .app { display: grid; grid-template-columns: 1fr; }
+  .app-side { display: none; background: var(--ink); color: #c9d2db; padding: 1rem .75rem; }
+  .app-side b { display: block; color: var(--paper); font-weight: 600; margin-bottom: 1rem; font-size: .8rem; }
+  .app-side span { display: block; padding: .35rem .5rem; border-radius: 3px; margin-bottom: 2px; }
+  .app-side span.on { background: rgba(200, 161, 90, .18); color: var(--paper); }
+  .app-main { padding: 1rem; }
+  .app-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: .9rem; gap: .5rem; }
+  .app-head strong { font-size: .95rem; font-weight: 600; }
+  .app-head small { color: var(--ink-3); }
+
+  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; margin-bottom: .9rem; }
+  .kpi { border: 1px solid var(--line); border-radius: 4px; padding: .6rem .65rem; }
+  .kpi small { display: block; color: var(--ink-3); font-size: .66rem; margin-bottom: .15rem; }
+  .kpi b { display: block; font-size: 1.15rem; font-weight: 600; letter-spacing: -.01em; line-height: 1.2; }
+  .kpi .meter { height: 4px; background: var(--sand-tint); border-radius: 2px; margin-top: .4rem; }
+  .kpi .meter i { display: block; height: 100%; width: 94%; background: var(--sand); border-radius: 2px; }
+  .kpi .delta { font-size: .66rem; color: var(--ok); }
+  .kpi .delta.neg { color: var(--warn); }
+
+  .bars { border: 1px solid var(--line); border-radius: 4px; padding: .6rem .65rem; margin-bottom: .9rem; }
+  .bars p { margin: 0 0 .45rem; font-weight: 600; font-size: .7rem; }
+  .bar-row { display: grid; grid-template-columns: 5.5rem 1fr 2.4rem; align-items: center; gap: .5rem; margin-bottom: .3rem; color: var(--ink-2); font-size: .68rem; }
+  .bar-row div { height: 6px; background: #eeeae1; border-radius: 3px; }
+  .bar-row div i { display: block; height: 100%; background: var(--ink); border-radius: 3px; }
+  .bar-row span:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .mock-table { width: 100%; border-collapse: collapse; font-size: .7rem; }
+  .mock-table caption { text-align: left; font-weight: 600; padding-bottom: .4rem; }
+  .mock-table th { text-align: left; font-weight: 500; color: var(--ink-3); border-bottom: 1px solid var(--line); padding: .3rem .4rem .3rem 0; }
+  .mock-table td { border-bottom: 1px solid #f0ece4; padding: .4rem .4rem .4rem 0; white-space: nowrap; }
+  .mock-table td.num { font-variant-numeric: tabular-nums; }
+  .pill { display: inline-block; padding: .05rem .45rem; border-radius: 999px; font-size: .64rem; font-weight: 500; }
+  .pill.renew { background: #e3efe8; color: var(--ok); }
+  .pill.notice { background: #f6e6cf; color: var(--warn); }
+  .pill.open { background: #ebe8e1; color: var(--ink-2); }
+  .hide-sm { display: none; }
+
+  /* Logos */
+  .logos { padding: 2.25rem 0; background: var(--paper); border-top: 1px solid var(--line); }
+  .logos-inner { display: grid; gap: 1.25rem; align-items: center; }
+  .logos-label { margin: 0; font-size: .875rem; color: var(--ink-3); }
+  .logo-row { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; }
+  .logo-row li {
+    background: #e9e5dc; min-height: 52px; display: grid; place-items: center;
+    font-size: .75rem; color: var(--ink-3);
   }
 
   /* Metrics */
-  .metrics { background: var(--blue-50); padding: 2.5rem 0; }
-  .metric-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
-  .metric-value { display: block; font-size: 2.25rem; font-weight: 700; color: var(--blue-600); line-height: 1.1; }
-  .metric-label { display: block; color: var(--ink-soft); margin-top: .25rem; }
+  .metrics { background: var(--white); padding: 3.5rem 0 3rem; }
+  .metric-row { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
+  .metric-row li { border-top: 1px solid var(--ink); padding-top: 1rem; }
+  .metric-num { display: block; font-family: var(--serif); font-size: clamp(3rem, 11vw, 5.5rem); line-height: .95; letter-spacing: -.03em; }
+  .metric-num sup { font-size: .45em; color: var(--sand-deep); vertical-align: top; position: relative; top: .25em; }
+  .metric-label { display: block; margin-top: .5rem; font-size: .9rem; color: var(--ink-2); }
+  .offices {
+    margin: 2.5rem 0 0; padding-top: 1.25rem; border-top: 1px solid var(--line);
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem 1rem; font-size: .9rem; color: var(--ink-3);
+  }
+  .offices strong { font-family: var(--serif); font-weight: 400; font-size: 1.6rem; color: var(--ink); letter-spacing: -.01em; }
+  .offices strong span { color: var(--sand-deep); padding: 0 .35rem; }
 
-  /* Cards */
-  .card-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
-  .card {
-    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 1.5rem; display: flex; flex-direction: column;
-    transition: box-shadow .15s, border-color .15s;
+  /* Products */
+  .products h2 { font-size: clamp(2.2rem, 6vw, 3.6rem); max-width: 18ch; }
+  .featured {
+    margin-top: 2.5rem; display: grid; gap: 2rem; padding: 2rem 0 2.5rem;
+    border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line);
   }
-  .card:hover { border-color: var(--blue-600); box-shadow: 0 6px 20px rgba(11, 37, 69, .08); }
-  .card .product-name { font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--blue-600); margin-bottom: .5rem; }
-  .card p { color: var(--ink-soft); }
-  .card .learn-more { margin-top: auto; font-weight: 600; text-decoration: none; }
-  .card .learn-more:hover { text-decoration: underline; }
-  .card .learn-more span[aria-hidden] { margin-left: .25rem; }
-  .icon {
-    width: 40px; height: 40px; border-radius: 8px; background: var(--blue-100); color: var(--blue-600);
-    display: grid; place-items: center; margin-bottom: 1rem;
+  .featured .kicker { font-size: .9rem; color: var(--sand-deep); font-weight: 500; margin-bottom: .5rem; }
+  .featured h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 4.5vw, 2.6rem); line-height: 1.05; letter-spacing: -.015em; }
+  .featured p { color: var(--ink-2); max-width: 34rem; }
+  .outcomes { list-style: none; padding: 0; margin: 1.5rem 0 1.75rem; counter-reset: o; }
+  .outcomes li {
+    counter-increment: o; display: grid; grid-template-columns: 2rem 1fr; gap: .5rem;
+    padding: .85rem 0; border-top: 1px solid var(--line); color: var(--ink);
   }
-  .icon svg { width: 22px; height: 22px; }
+  .outcomes li::before { content: "0" counter(o); font-family: var(--serif); font-size: 1.2rem; color: var(--sand-deep); line-height: 1.3; }
+
+  /* Mini unit-availability mockup */
+  .mini .app-main { padding: .9rem; }
+  .unit-legend { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: .6rem; color: var(--ink-3); font-size: .66rem; }
+  .unit-legend i { display: inline-block; width: 8px; height: 8px; margin-right: .3rem; vertical-align: middle; }
+  .floors { display: grid; gap: 3px; }
+  .floor { display: grid; grid-template-columns: 1.6rem repeat(8, 1fr); gap: 3px; align-items: center; }
+  .floor span { font-size: .62rem; color: var(--ink-3); }
+  .floor i { display: block; height: 18px; border-radius: 2px; }
+  .u-sold { background: var(--ink); }
+  .u-leased { background: var(--sand); }
+  .u-free { background: #e6e1d6; }
+  .plan { margin-top: .8rem; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: 4px; }
+  .plan div { padding: .45rem .5rem; border-right: 1px solid var(--line); }
+  .plan div:last-child { border-right: 0; }
+  .plan small { display: block; color: var(--ink-3); font-size: .6rem; }
+  .plan b { font-weight: 600; font-size: .72rem; }
+
+  .product-list { list-style: none; margin: 0; padding: 0; display: grid; }
+  .product-list a {
+    display: grid; grid-template-columns: 1fr auto; gap: .2rem 1rem; align-items: center;
+    padding: 1.35rem 0; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink);
+  }
+  .product-list h3 { margin: 0; font-size: 1.15rem; }
+  .product-list p { grid-column: 1; margin: 0; color: var(--ink-2); font-size: .95rem; }
+  .product-list .arrow { grid-row: 1 / span 2; grid-column: 2; font-size: 1.25rem; color: var(--sand-deep); transition: transform .15s; }
+  .product-list a:hover h3 { text-decoration: underline; text-decoration-color: var(--sand); text-underline-offset: 4px; }
+  .product-list a:hover .arrow { transform: translateX(4px); }
 
   /* Case studies */
-  .cases { background: var(--blue-50); }
-  .case-card { border-top: 4px solid var(--blue-600); }
-  .case-meta { font-size: .85rem; color: var(--ink-soft); margin-bottom: .75rem; }
-  .case-results { list-style: none; padding: 0; margin: 0 0 1.25rem; display: grid; gap: .5rem; }
-  .case-results li { padding-left: 1.25rem; position: relative; color: var(--ink); }
-  .case-results li::before { content: ""; position: absolute; left: 0; top: .6em; width: 8px; height: 8px; border-radius: 50%; background: var(--blue-600); }
+  .cases h2 { font-size: clamp(2rem, 5vw, 3rem); }
+  .case-grid { display: grid; gap: 0; margin-top: 2rem; }
+  .case { padding: 2rem 0; border-top: 1px solid var(--ink); }
+  .case-figure { font-family: var(--serif); font-size: clamp(3.4rem, 10vw, 5rem); line-height: .95; letter-spacing: -.03em; margin: 0 0 .75rem; }
+  .case-figure small { font-size: .4em; color: var(--ink-3); letter-spacing: 0; margin-left: .2em; }
+  .case-meta { font-size: .85rem; color: var(--ink-3); margin-bottom: .75rem; }
+  .case ul { padding-left: 1.1rem; margin: 0 0 1.25rem; color: var(--ink-2); }
+  .case li { margin-bottom: .3rem; }
+  .case li::marker { color: var(--sand-deep); }
 
-  /* Compliance strip */
-  .compliance { background: var(--blue-900); color: var(--white); padding: 3rem 0; }
-  .compliance h2 { color: var(--white); }
-  .compliance .section-intro { color: #c3d5ea; }
-  .compliance-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: .75rem; }
-  .compliance-list li {
-    border: 1px solid rgba(255,255,255,.25); border-radius: var(--radius); padding: 1rem 1.25rem;
-    display: flex; gap: .75rem; align-items: flex-start;
+  /* Pull quote */
+  .quote { background: var(--paper); padding: 5rem 0; }
+  .quote figure { margin: 0; max-width: 54rem; }
+  .quote blockquote { margin: 0; }
+  .quote blockquote p {
+    font-family: var(--serif); font-size: clamp(1.9rem, 5vw, 3.1rem); line-height: 1.12; letter-spacing: -.015em; margin: 0;
+    text-indent: -.4em;
   }
-  .compliance-list strong { display: block; }
-  .compliance-list span.desc { color: #c3d5ea; font-size: .9rem; }
-  .check { flex: none; width: 22px; height: 22px; color: #6cb8f6; margin-top: .15rem; }
+  .quote blockquote p::before { content: "\201C"; color: var(--sand-deep); }
+  .quote blockquote p::after { content: "\201D"; color: var(--sand-deep); }
+  .quote figcaption { margin-top: 1.75rem; display: flex; gap: .9rem; align-items: center; font-size: .95rem; color: var(--ink-2); }
+  .quote figcaption::before { content: ""; width: 40px; height: 1px; background: var(--ink); }
+  .quote figcaption strong { color: var(--ink); font-weight: 600; }
+
+  /* Compliance (the dark section) */
+  .compliance h2 { font-size: clamp(2.2rem, 6vw, 3.8rem); color: var(--paper); max-width: 14ch; }
+  .compliance .lede { color: #c6cfd8; }
+  .compliance-list { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; grid-template-columns: 1fr; }
+  .compliance-list li { padding: 1.25rem 0; border-top: 1px solid var(--line-ink); display: grid; grid-template-columns: 2.5rem 1fr; gap: .25rem 1rem; }
+  .compliance-list .n { font-family: var(--serif); font-size: 1.4rem; color: var(--sand); line-height: 1.2; grid-row: span 2; }
+  .compliance-list h3 { margin: 0; color: var(--paper); font-size: 1.05rem; }
+  .compliance-list p { margin: 0; color: #c6cfd8; font-size: .92rem; }
 
   /* Why DNT */
-  .why-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
-  .why-col { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.75rem; }
-  .why-col.products { background: var(--blue-50); border-color: #b9d3ee; }
-  .why-col .tag { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: .2rem .6rem; border-radius: 4px; margin-bottom: .75rem; }
-  .why-col.products .tag { background: var(--blue-600); color: var(--white); }
-  .why-col.services .tag { background: var(--blue-900); color: var(--white); }
-  .why-col ul { padding-left: 1.2rem; margin: 0 0 1rem; }
-  .why-col li { margin-bottom: .4rem; }
-  .why-col .best-for { font-size: .9rem; color: var(--ink-soft); border-top: 1px solid var(--line); padding-top: .9rem; margin: 0; }
+  .why h2 { font-size: clamp(2rem, 5vw, 3.2rem); }
+  .why-grid { display: grid; gap: 0; margin-top: 2.5rem; }
+  .why-col { padding: 2rem 0; border-top: 2px solid var(--ink); }
+  .why-col + .why-col { border-top-color: var(--sand); }
+  .why-col .label { font-size: .9rem; font-weight: 500; color: var(--sand-deep); margin-bottom: .4rem; }
+  .why-col h3 { font-family: var(--serif); font-weight: 400; font-size: 1.9rem; line-height: 1.1; letter-spacing: -.01em; }
+  .why-col ul { list-style: none; padding: 0; margin: 1rem 0 1.5rem; }
+  .why-col li { padding: .6rem 0; border-bottom: 1px solid var(--line); color: var(--ink-2); }
+  .why-col .best-for { font-size: .95rem; color: var(--ink); margin: 0; }
 
   /* FAQ */
-  .faq-list { max-width: 50rem; }
-  .faq-item { border-bottom: 1px solid var(--line); }
-  .faq-item:first-child { border-top: 1px solid var(--line); }
-  .faq-item summary {
-    list-style: none; cursor: pointer; padding: 1.1rem 2.5rem 1.1rem 0; position: relative;
-  }
+  .faq-grid { display: grid; gap: 2rem; }
+  .faq h2 { font-size: clamp(2rem, 5vw, 2.8rem); }
+  .faq-item { border-top: 1px solid var(--ink); }
+  .faq-item:last-child { border-bottom: 1px solid var(--ink); }
+  .faq-item summary { list-style: none; cursor: pointer; padding: 1.25rem 2.5rem 1.25rem 0; position: relative; }
   .faq-item summary::-webkit-details-marker { display: none; }
-  .faq-item summary h3 { margin: 0; font-size: 1.05rem; }
+  .faq-item summary h3 { margin: 0; font-size: 1.1rem; font-weight: 500; }
   .faq-item summary::after {
-    content: "+"; position: absolute; right: .25rem; top: 50%; transform: translateY(-50%);
-    font-size: 1.5rem; font-weight: 400; color: var(--blue-600); line-height: 1;
+    content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+    font-family: var(--serif); font-size: 2rem; color: var(--sand-deep); line-height: 1;
   }
   .faq-item[open] summary::after { content: "\2212"; }
-  .faq-answer { padding: 0 0 1.25rem; color: var(--ink-soft); }
+  .faq-answer { padding: 0 2.5rem 1.5rem 0; color: var(--ink-2); }
   .faq-answer p:last-child { margin-bottom: 0; }
+  .faq-answer a { text-decoration-color: var(--sand); text-underline-offset: 3px; }
 
   /* Final CTA */
-  .final-cta { background: var(--blue-600); color: var(--white); text-align: center; }
-  .final-cta h2 { color: var(--white); }
-  .final-cta p { color: #e6f0fa; max-width: 38rem; margin: 0 auto 1.75rem; }
-  .final-cta .btn-primary { background: var(--white); color: var(--blue-700); }
-  .final-cta .btn-primary:hover { background: var(--blue-100); color: var(--blue-900); }
-  .cta-actions { display: flex; flex-direction: column; gap: .75rem; align-items: center; }
+  .final-cta { padding: 5rem 0; border-top: 1px solid var(--line); }
+  .final-cta h2 { font-size: clamp(2.6rem, 8vw, 5rem); max-width: 16ch; }
+  .final-cta .lede { margin-bottom: 2rem; }
 
   /* Footer */
-  .site-footer { background: #0a1c33; color: #c3d5ea; padding: 3rem 0 1.5rem; font-size: .95rem; }
-  .site-footer a { color: #ffffff; }
-  .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2rem; }
-  .footer-title { color: var(--white); font-size: 1rem; font-weight: 600; margin: 0 0 .75rem; }
+  .site-footer { background: var(--ink); color: #c6cfd8; padding: 3.5rem 0 1.5rem; font-size: .92rem; }
+  .site-footer a { color: var(--paper); text-decoration: none; }
+  .site-footer a:hover { text-decoration: underline; text-decoration-color: var(--sand); }
+  .footer-grid { display: grid; gap: 2rem; margin-bottom: 2.5rem; }
+  .footer-brand { font-family: var(--serif); font-size: 2rem; color: var(--paper); line-height: 1; margin: 0 0 1rem; }
+  .footer-brand span { color: var(--sand); }
+  .footer-title { color: var(--sand); font-size: .85rem; font-weight: 500; margin: 0 0 .75rem; }
   .site-footer ul { list-style: none; margin: 0; padding: 0; }
-  .site-footer li { margin-bottom: .4rem; }
-  .site-footer address { font-style: normal; }
-  .footer-bottom { border-top: 1px solid rgba(255,255,255,.15); padding-top: 1.25rem; font-size: .85rem; display: flex; flex-direction: column; gap: .5rem; }
+  .site-footer li { margin-bottom: .45rem; }
+  .site-footer address { font-style: normal; line-height: 1.8; }
+  .site-footer .verify { margin-left: .25rem; }
+  .footer-bottom { border-top: 1px solid var(--line-ink); padding-top: 1.25rem; font-size: .82rem; display: flex; flex-direction: column; gap: .4rem; }
+  .footer-bottom p { margin: 0; }
 
-  /* Larger screens */
-  @media (min-width: 600px) {
-    .hero-actions, .cta-actions { flex-direction: row; justify-content: flex-start; }
-    .cta-actions { justify-content: center; }
-    .logo-grid { grid-template-columns: repeat(3, 1fr); }
-    .metric-list { grid-template-columns: repeat(3, 1fr); }
-    .card-grid { grid-template-columns: repeat(2, 1fr); }
-    .compliance-list { grid-template-columns: repeat(2, 1fr); }
-    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  /* ---------- Tablet ---------- */
+  @media (min-width: 640px) {
+    .hide-sm { display: table-cell; }
+    .logo-row { grid-template-columns: repeat(6, 1fr); }
+    .metric-row { grid-template-columns: repeat(4, 1fr); }
+    .product-list { grid-template-columns: 1fr 1fr; column-gap: 3rem; }
+    .compliance-list { grid-template-columns: 1fr 1fr; column-gap: 2.5rem; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
     .footer-bottom { flex-direction: row; justify-content: space-between; }
   }
 
-  @media (min-width: 960px) {
-    section { padding: 5rem 0; }
-    .hero { padding: 6rem 0 6.5rem; }
+  /* ---------- Desktop ---------- */
+  @media (min-width: 1000px) {
+    section { padding: 6.5rem 0; }
+    .wrap { padding: 0 2rem; }
     .header-inner { flex-wrap: nowrap; }
     .nav-toggle { display: none; }
     .site-nav { display: block !important; width: auto; }
-    .site-nav ul { display: flex; gap: 1.75rem; padding: 0; }
-    .site-nav a { padding: .5rem 0; }
-    .nav-cta { display: inline-flex; }
-    .logo-grid { grid-template-columns: repeat(6, 1fr); }
-    .card-grid.products-grid { grid-template-columns: repeat(3, 1fr); }
-    .compliance-list { grid-template-columns: repeat(5, 1fr); }
-    .compliance-list li { flex-direction: column; }
-    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .site-nav ul { display: flex; gap: 2rem; padding: 0; }
+    .site-nav a { border: 0; padding: .5rem 0; }
+    .nav-cta { display: inline-flex; min-height: 42px; padding: .6rem 1.2rem; }
+
+    .hero { padding: 4.5rem 0 5rem; }
+    .hero-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 3.5rem; }
+    .hero h1 { font-size: clamp(3rem, 4.4vw, 4rem); }
+    .hero .browser { font-size: .82rem; }
+    .hero .app { min-height: 30rem; }
+    .hero .kpi b { font-size: 1.35rem; }
+    .app { grid-template-columns: 8.5rem 1fr; }
+    .app-side { display: block; }
+
+    .logos-inner { grid-template-columns: 14rem 1fr; gap: 2rem; }
+
+    .featured { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 4rem; align-items: center; padding: 3rem 0 3.5rem; }
+
+    .case-grid { grid-template-columns: 1fr 1fr; gap: 4rem; }
+
+    .compliance-head { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; }
+    .compliance-list { grid-template-columns: repeat(5, 1fr); column-gap: 1.5rem; }
+    .compliance-list li { grid-template-columns: 1fr; padding-top: 1.5rem; }
+    .compliance-list .n { grid-row: auto; margin-bottom: .75rem; }
+
+    .why-grid { grid-template-columns: 1fr 1fr; gap: 4rem; }
+
+    .faq-grid { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 4rem; }
+
+    .final-cta .wrap { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 4rem; align-items: end; }
+    .final-cta h2 { margin-bottom: 0; }
+    .final-cta .lede { margin-bottom: 1.5rem; }
+
     .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
   }
 </style>
@@ -359,15 +498,12 @@
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="site-header">
-  <div class="container header-inner">
+  <div class="wrap header-inner">
     <a class="brand" href="/" aria-label="Dynamic Netsoft home">
-      <span class="brand-mark" aria-hidden="true">DNT</span>
-      <span class="brand-name">Dynamic Netsoft<small>Microsoft Dynamics 365 partner</small></span>
+      <span class="brand-mark" aria-hidden="true">DN<span>T</span></span>
+      <span class="brand-name">Dynamic Netsoft</span>
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      Menu
-    </button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <ul>
         <li><a href="#products">Products</a></li>
@@ -377,31 +513,92 @@
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
-    <a class="btn btn-primary nav-cta" href="#contact">Book a demo</a>
+    <a class="btn btn-solid nav-cta" href="#contact">Book a demo</a>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- 1. Hero (static, no carousel) -->
+  <!-- 1. Hero: split layout, static -->
   <section class="hero" aria-labelledby="hero-title">
-    <div class="container">
-      <h1 id="hero-title">Microsoft Dynamics 365 partner and ISV for real estate, construction and finance in the UAE &amp; KSA</h1>
-      <p class="subline">We build Dynamics 365 products for property, contracting and treasury teams, and we implement them with the local tax, language and data rules your business has to follow.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact">Book a demo</a>
-        <a class="btn btn-secondary" href="/pricing-calculator">See pricing calculator</a>
+    <div class="wrap hero-grid">
+      <div>
+        <h1 id="hero-title">Microsoft Dynamics 365 partner and ISV for real estate, construction and finance in the <em>UAE &amp; KSA</em></h1>
+        <p class="tagline-ar" lang="ar" dir="rtl">شريك مايكروسوفت داينامكس 365 لقطاعات العقارات والمقاولات والمالية <span class="verify" lang="en" dir="ltr">[VERIFY]</span></p>
+        <p class="lede">We build Dynamics 365 products for property, contracting and finance teams, and we implement them with the local tax, language and data rules your business has to follow.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#contact">Book a demo</a>
+          <a class="btn btn-line" href="/pricing-calculator">See pricing calculator</a>
+        </div>
       </div>
-      <p class="hero-note">Working with organisations across the UAE, Saudi Arabia and the Middle East since 2011.</p>
+
+      <figure class="browser" role="img" aria-label="Illustration of the RealEstatePro portfolio dashboard in Dynamics 365, showing occupancy, rent due and upcoming lease expiries. Sample data.">
+        <div class="browser-bar">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="url">realestatepro · Dynamics 365 Finance and Operations</span>
+        </div>
+        <div class="app">
+          <div class="app-side">
+            <b>RealEstatePro</b>
+            <span class="on">Portfolio</span>
+            <span>Units</span>
+            <span>Leases</span>
+            <span>Collections</span>
+            <span>Sales</span>
+            <span>Reports</span>
+          </div>
+          <div class="app-main">
+            <div class="app-head">
+              <strong>Portfolio overview</strong>
+              <small>Sample data · Oct 2026</small>
+            </div>
+            <div class="kpis">
+              <div class="kpi">
+                <small>Occupancy</small>
+                <b>94.2%</b>
+                <div class="meter"><i></i></div>
+              </div>
+              <div class="kpi">
+                <small>Rent due this month</small>
+                <b>AED 4.8M</b>
+                <span class="delta">86% collected</span>
+              </div>
+              <div class="kpi">
+                <small>Overdue</small>
+                <b>AED 0.6M</b>
+                <span class="delta neg">14 tenants</span>
+              </div>
+            </div>
+            <div class="bars">
+              <p>Occupancy by building</p>
+              <div class="bar-row"><span>Marina Tower</span><div><i style="width:97%"></i></div><span>97%</span></div>
+              <div class="bar-row"><span>Business Bay 2</span><div><i style="width:92%"></i></div><span>92%</span></div>
+              <div class="bar-row"><span>Al Olaya Plaza</span><div><i style="width:89%"></i></div><span>89%</span></div>
+            </div>
+            <table class="mock-table">
+              <caption>Lease expiries · next 90 days</caption>
+              <thead>
+                <tr><th>Unit</th><th>Tenant</th><th class="hide-sm">Annual rent</th><th>Expires</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>MT-1204</td><td>Gulf Trading LLC</td><td class="num hide-sm">AED 186,000</td><td>02 Nov</td><td><span class="pill renew">Renewing</span></td></tr>
+                <tr><td>BB-0817</td><td>Noor Clinics</td><td class="num hide-sm">AED 242,500</td><td>19 Nov</td><td><span class="pill notice">Notice</span></td></tr>
+                <tr><td>AO-0302</td><td>Rawabi Retail</td><td class="num hide-sm">SAR 310,000</td><td>08 Dec</td><td><span class="pill open">Open</span></td></tr>
+                <tr><td>MT-0711</td><td>Harbour Legal</td><td class="num hide-sm">AED 128,000</td><td>21 Dec</td><td><span class="pill renew">Renewing</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </figure>
     </div>
   </section>
 
-  <!-- 2. Client logo bar -->
+  <!-- 2. Client logos -->
   <section class="logos" aria-labelledby="clients-title">
-    <div class="container">
+    <div class="wrap logos-inner">
       <h2 id="clients-title" class="visually-hidden">Clients</h2>
-      <p class="logos-label">Used by real estate, construction and finance teams in the region</p>
-      <ul class="logo-grid">
+      <p class="logos-label">Used by real estate, construction and finance teams across the region</p>
+      <ul class="logo-row">
         <li>Client logo</li>
         <li>Client logo</li>
         <li>Client logo</li>
@@ -412,183 +609,213 @@
     </div>
   </section>
 
-  <!-- 3. Metrics band -->
+  <!-- 3. Metrics strip + offices -->
   <section class="metrics" aria-labelledby="metrics-title">
-    <div class="container">
+    <div class="wrap">
       <h2 id="metrics-title" class="visually-hidden">DNT at a glance</h2>
-      <ul class="metric-list">
+      <ul class="metric-row">
         <li>
-          <span class="metric-value">2011</span>
+          <span class="metric-num">2011</span>
           <span class="metric-label">Founded <span class="verify">[VERIFY]</span></span>
         </li>
         <li>
-          <span class="metric-value">100+</span>
+          <span class="metric-num">100<sup>+</sup></span>
           <span class="metric-label">Dynamics projects delivered <span class="verify">[VERIFY]</span></span>
         </li>
         <li>
-          <span class="metric-value">UAE &amp; India</span>
-          <span class="metric-label">Offices <span class="verify">[VERIFY]</span></span>
+          <span class="metric-num">6</span>
+          <span class="metric-label">ISV products on Dynamics 365</span>
+        </li>
+        <li>
+          <span class="metric-num">2</span>
+          <span class="metric-label">Core markets: UAE and KSA</span>
         </li>
       </ul>
+      <p class="offices">
+        <span>Offices</span>
+        <strong>Dubai<span aria-hidden="true">·</span>Riyadh<span aria-hidden="true">·</span>Chennai</strong>
+        <span class="verify">[VERIFY]</span>
+      </p>
     </div>
   </section>
 
-  <!-- 4. Product grid -->
-  <section id="products" aria-labelledby="products-title">
-    <div class="container">
-      <span class="eyebrow">ISV products</span>
-      <h2 id="products-title">Products built on Microsoft Dynamics 365</h2>
-      <p class="section-intro">Each product runs inside Dynamics 365 Finance and Operations, so your teams work in one system with one set of data.</p>
+  <!-- 4. Products -->
+  <section id="products" class="products bg-paper" aria-labelledby="products-title">
+    <div class="wrap">
+      <hr class="rule">
+      <h2 id="products-title">Products built inside Dynamics 365</h2>
+      <p class="lede">Each product runs in Dynamics 365 Finance and Operations, so your teams work in one system with one set of data.</p>
 
-      <div class="card-grid products-grid">
-        <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
-          </div>
-          <p class="product-name">RealEstatePro</p>
-          <h3>Manage leases, unit sales and rent collection in one place</h3>
-          <p>Track properties, units, tenants and payment plans, and post every invoice and receipt straight to your general ledger.</p>
-          <a class="learn-more" href="/products/realestatepro">Learn more<span class="visually-hidden"> about RealEstatePro</span><span aria-hidden="true">→</span></a>
-        </article>
+      <article class="featured" aria-labelledby="rep-title">
+        <div>
+          <p class="kicker">RealEstatePro</p>
+          <h3 id="rep-title">Run leasing, unit sales and collections from your ledger</h3>
+          <p>Property, unit, tenant and payment-plan management for developers and landlords, posted straight to Dynamics 365 Finance.</p>
+          <ul class="outcomes">
+            <li>See occupancy, rent due and overdue balances for every building on one screen</li>
+            <li>Bill rent and sales instalments automatically, with UAE VAT and ZATCA-ready invoices</li>
+            <li>Act on lease expiries and renewals before units fall vacant</li>
+          </ul>
+          <a class="text-link" href="/products/realestatepro">Explore RealEstatePro</a>
+        </div>
 
-        <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+        <figure class="browser mini" role="img" aria-label="Illustration of a RealEstatePro unit availability grid and payment plan. Sample data.">
+          <div class="browser-bar">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="url">Units · Marina Tower</span>
           </div>
-          <p class="product-name">Contract Management</p>
-          <h3>Keep project contracts, variations and payments under control</h3>
-          <p>Record main contracts and subcontracts, approve variations, and raise progress billing with retention calculated for you.</p>
-          <a class="learn-more" href="/products/contract-management">Learn more<span class="visually-hidden"> about Contract Management</span><span aria-hidden="true">→</span></a>
-        </article>
+          <div class="app-main">
+            <div class="app-head">
+              <strong>Unit availability</strong>
+              <small>Floors 18–23</small>
+            </div>
+            <div class="unit-legend">
+              <span><i class="u-sold"></i>Sold</span>
+              <span><i class="u-leased"></i>Leased</span>
+              <span><i class="u-free"></i>Available</span>
+            </div>
+            <div class="floors">
+              <div class="floor"><span>23</span><i class="u-sold"></i><i class="u-sold"></i><i class="u-leased"></i><i class="u-sold"></i><i class="u-free"></i><i class="u-sold"></i><i class="u-leased"></i><i class="u-sold"></i></div>
+              <div class="floor"><span>22</span><i class="u-leased"></i><i class="u-sold"></i><i class="u-sold"></i><i class="u-free"></i><i class="u-leased"></i><i class="u-sold"></i><i class="u-sold"></i><i class="u-leased"></i></div>
+              <div class="floor"><span>21</span><i class="u-sold"></i><i class="u-leased"></i><i class="u-sold"></i><i class="u-sold"></i><i class="u-sold"></i><i class="u-free"></i><i class="u-leased"></i><i class="u-sold"></i></div>
+              <div class="floor"><span>20</span><i class="u-leased"></i><i class="u-leased"></i><i class="u-free"></i><i class="u-sold"></i><i class="u-leased"></i><i class="u-sold"></i><i class="u-sold"></i><i class="u-free"></i></div>
+              <div class="floor"><span>19</span><i class="u-sold"></i><i class="u-sold"></i><i class="u-leased"></i><i class="u-leased"></i><i class="u-sold"></i><i class="u-leased"></i><i class="u-free"></i><i class="u-sold"></i></div>
+              <div class="floor"><span>18</span><i class="u-leased"></i><i class="u-sold"></i><i class="u-sold"></i><i class="u-leased"></i><i class="u-free"></i><i class="u-sold"></i><i class="u-leased"></i><i class="u-leased"></i></div>
+            </div>
+            <div class="plan">
+              <div><small>Unit 2104</small><b>AED 2.35M</b></div>
+              <div><small>Booking</small><b>10%</b></div>
+              <div><small>Construction</small><b>50%</b></div>
+              <div><small>Handover</small><b>40%</b></div>
+            </div>
+          </div>
+        </figure>
+      </article>
 
-        <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg>
-          </div>
-          <p class="product-name">Bid Management</p>
-          <h3>Prepare tenders faster with costs you can trust</h3>
-          <p>Build bills of quantities, price them from current cost data and turn a won bid into a live project without re-keying.</p>
-          <a class="learn-more" href="/products/bid-management">Learn more<span class="visually-hidden"> about Bid Management</span><span aria-hidden="true">→</span></a>
-        </article>
-
-        <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h18M5 10v8M9 10v8M15 10v8M19 10v8M3 21h18M12 3l9 5H3z"/></svg>
-          </div>
-          <p class="product-name">Treasury</p>
-          <h3>See your cash and bank facilities across every bank, every day</h3>
-          <p>Manage loans, letters of credit, guarantees and deposits, and forecast cash with figures taken from your live ledger.</p>
-          <a class="learn-more" href="/products/treasury">Learn more<span class="visually-hidden"> about Treasury</span><span aria-hidden="true">→</span></a>
-        </article>
-
-        <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></svg>
-          </div>
-          <p class="product-name">Investment Portfolio Management</p>
-          <h3>Track every investment and its accounting in one view</h3>
-          <p>Record equities, funds and other holdings, value them at market prices and post gains and losses automatically.</p>
-          <a class="learn-more" href="/products/investment-portfolio-management">Learn more<span class="visually-hidden"> about Investment Portfolio Management</span><span aria-hidden="true">→</span></a>
-        </article>
-
-        <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg>
-          </div>
-          <p class="product-name">AXOnePay</p>
-          <h3>Collect and reconcile payments without manual matching</h3>
-          <p>Connect online and card payments to Dynamics 365 so receipts are recorded and matched to invoices as they arrive.</p>
-          <a class="learn-more" href="/products/axonepay">Learn more<span class="visually-hidden"> about AXOnePay</span><span aria-hidden="true">→</span></a>
-        </article>
-      </div>
+      <ul class="product-list">
+        <li>
+          <a href="/products/contract-management">
+            <h3>Contract Management</h3>
+            <p>Track contracts, variations and progress billing with retention calculated for you.</p>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products/bid-management">
+            <h3>Bid Management</h3>
+            <p>Price tenders from live cost data and turn a won bid into a project without re-keying.</p>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products/treasury">
+            <h3>Treasury</h3>
+            <p>See cash, loans, guarantees and letters of credit across every bank, every day.</p>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products/investment-portfolio-management">
+            <h3>Investment Portfolio Management</h3>
+            <p>Value holdings at market prices and post gains and losses automatically.</p>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="/products/axonepay">
+            <h3>AXOnePay</h3>
+            <p>Payroll for Dynamics 365 F&amp;O, with compensation, benefits and the full employee lifecycle.</p>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
 
   <!-- 5. Case studies -->
-  <section id="case-studies" class="cases" aria-labelledby="cases-title">
-    <div class="container">
-      <span class="eyebrow">Case studies</span>
+  <section id="case-studies" class="cases bg-white" aria-labelledby="cases-title">
+    <div class="wrap">
       <h2 id="cases-title">Results our clients can measure</h2>
-      <p class="section-intro">Placeholder case studies. Replace client names and figures with approved, verified data before publishing.</p>
+      <p class="lede">Placeholder case studies. Replace client names and figures with approved, verified data before publishing.</p>
 
-      <div class="card-grid">
-        <article class="card case-card">
+      <div class="case-grid">
+        <article class="case">
+          <p class="case-figure" aria-hidden="true">12→5<small>days</small></p>
           <p class="case-meta">Real estate developer · Dubai, UAE · RealEstatePro</p>
           <h3>Month-end close cut from 12 days to 5 <span class="verify">[VERIFY]</span></h3>
-          <ul class="case-results">
+          <ul>
             <li>Lease billing and receipts posted directly to the ledger</li>
             <li>40% fewer manual journal entries <span class="verify">[VERIFY]</span></li>
             <li>One view of units, tenants and overdue rent</li>
           </ul>
-          <a class="learn-more" href="/case-studies/real-estate-developer">Read the case study<span class="visually-hidden"> about the Dubai real estate developer</span><span aria-hidden="true">→</span></a>
+          <a class="text-link" href="/case-studies/real-estate-developer">Read the case study<span class="visually-hidden"> about the Dubai real estate developer</span></a>
         </article>
 
-        <article class="card case-card">
+        <article class="case">
+          <p class="case-figure" aria-hidden="true">−30%</p>
           <p class="case-meta">Contracting company · Riyadh, KSA · Contract Management, Bid Management</p>
           <h3>Tender preparation time reduced by 30% <span class="verify">[VERIFY]</span></h3>
-          <ul class="case-results">
+          <ul>
             <li>Bids priced from live cost data in Dynamics 365</li>
             <li>ZATCA-compliant progress invoices issued from the system</li>
             <li>Variation approvals tracked against each contract <span class="verify">[VERIFY]</span></li>
           </ul>
-          <a class="learn-more" href="/case-studies/contracting-company">Read the case study<span class="visually-hidden"> about the Riyadh contracting company</span><span aria-hidden="true">→</span></a>
+          <a class="text-link" href="/case-studies/contracting-company">Read the case study<span class="visually-hidden"> about the Riyadh contracting company</span></a>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- 6. GCC compliance strip -->
-  <section id="compliance" class="compliance" aria-labelledby="compliance-title">
-    <div class="container">
-      <h2 id="compliance-title">Ready for GCC compliance</h2>
-      <p class="section-intro">Our products and implementations are set up for the tax, invoicing, language and data rules in the UAE and Saudi Arabia.</p>
-      <ul class="compliance-list">
-        <li>
-          <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
-          <div><strong>UAE VAT</strong><span class="desc">VAT calculation and returns in line with FTA requirements</span></div>
-        </li>
-        <li>
-          <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
-          <div><strong>UAE e-invoicing</strong><span class="desc">Prepared for the UAE electronic invoicing programme</span></div>
-        </li>
-        <li>
-          <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
-          <div><strong>ZATCA</strong><span class="desc">Saudi e-invoicing (FATOORA) phases 1 and 2</span></div>
-        </li>
-        <li>
-          <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
-          <div><strong>Arabic support</strong><span class="desc">Arabic and right-to-left documents and screens</span></div>
-        </li>
-        <li>
-          <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
-          <div><strong>UAE data residency</strong><span class="desc">Hosted in Microsoft Azure UAE data centres</span></div>
-        </li>
-      </ul>
+  <!-- Pull-quote testimonial -->
+  <section class="quote" aria-label="Client testimonial">
+    <div class="wrap">
+      <figure>
+        <blockquote>
+          <p>We stopped reconciling spreadsheets at month-end. Leasing, collections and finance now work from the same numbers.</p>
+        </blockquote>
+        <figcaption><span><strong>[Name]</strong>, Chief Financial Officer, [Real estate developer], Dubai <span class="verify">[VERIFY]</span></span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 6. GCC compliance (dark section) -->
+  <section id="compliance" class="compliance bg-ink" aria-labelledby="compliance-title">
+    <div class="wrap">
+      <div class="compliance-head">
+        <h2 id="compliance-title">Built for GCC rules</h2>
+        <p class="lede">Our products and implementations are set up for the tax, invoicing, language and data rules in the UAE and Saudi Arabia.</p>
+      </div>
+      <ol class="compliance-list">
+        <li><span class="n" aria-hidden="true">01</span><h3>UAE VAT</h3><p>VAT calculation and returns in line with FTA requirements.</p></li>
+        <li><span class="n" aria-hidden="true">02</span><h3>UAE e-invoicing</h3><p>Prepared for the UAE electronic invoicing programme.</p></li>
+        <li><span class="n" aria-hidden="true">03</span><h3>ZATCA</h3><p>Saudi e-invoicing (FATOORA), phases 1 and 2.</p></li>
+        <li><span class="n" aria-hidden="true">04</span><h3>Arabic support</h3><p>Arabic and right-to-left documents and screens.</p></li>
+        <li><span class="n" aria-hidden="true">05</span><h3>UAE data residency</h3><p>Hosted in Microsoft Azure UAE data centres.</p></li>
+      </ol>
     </div>
   </section>
 
   <!-- 7. Why DNT -->
-  <section id="why-dnt" aria-labelledby="why-title">
-    <div class="container">
-      <span class="eyebrow">Why DNT</span>
-      <h2 id="why-title">Two ways we work with you</h2>
-      <p class="section-intro">You can license our products, hire our team to implement Dynamics 365, or both. Here is what each one covers.</p>
+  <section id="why-dnt" class="why bg-paper" aria-labelledby="why-title">
+    <div class="wrap">
+      <hr class="rule">
+      <h2 id="why-title">Two ways to work with us</h2>
+      <p class="lede">License our products, hire our team to implement Dynamics 365, or both. Here is what each one covers.</p>
 
       <div class="why-grid">
-        <div class="why-col products">
-          <span class="tag">ISV products</span>
+        <div class="why-col">
+          <p class="label">ISV products</p>
           <h3>Software we build and maintain</h3>
           <ul>
-            <li>Ready-made modules for real estate, construction and finance</li>
+            <li>Ready-made modules for real estate, construction, finance and payroll</li>
             <li>Built inside Dynamics 365 Finance and Operations</li>
             <li>Updated for new Microsoft releases and local regulations</li>
             <li>Available to install through other Microsoft partners too</li>
           </ul>
-          <p class="best-for"><strong>Best for:</strong> organisations that already run Dynamics 365 and need industry features it does not include.</p>
+          <p class="best-for"><strong>Best for</strong> organisations that already run Dynamics 365 and need industry features it does not include.</p>
         </div>
-
-        <div class="why-col services">
-          <span class="tag">Implementation services</span>
+        <div class="why-col">
+          <p class="label">Implementation services</p>
           <h3>Projects we deliver for you</h3>
           <ul>
             <li>Dynamics 365 Finance, Supply Chain and Project Operations rollouts</li>
@@ -596,17 +823,20 @@
             <li>Integrations with banks, government portals and other systems</li>
             <li>Training and ongoing support after go-live</li>
           </ul>
-          <p class="best-for"><strong>Best for:</strong> organisations moving to Dynamics 365 or extending an existing system.</p>
+          <p class="best-for"><strong>Best for</strong> organisations moving to Dynamics 365 or extending an existing system.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- 8. FAQ -->
-  <section id="faq" class="cases" aria-labelledby="faq-title">
-    <div class="container">
-      <h2 id="faq-title">Frequently asked questions</h2>
-      <div class="faq-list">
+  <section id="faq" class="faq bg-white" aria-labelledby="faq-title">
+    <div class="wrap faq-grid">
+      <div>
+        <h2 id="faq-title">Questions we hear first</h2>
+        <p class="lede">Anything else, ask us during the demo.</p>
+      </div>
+      <div>
         <details class="faq-item">
           <summary><h3>How much does a Dynamics 365 implementation cost?</h3></summary>
           <div class="faq-answer">
@@ -630,13 +860,15 @@
   </section>
 
   <!-- 9. Final CTA -->
-  <section id="contact" class="final-cta" aria-labelledby="cta-title">
-    <div class="container">
-      <h2 id="cta-title">See DNT products working in your Dynamics 365</h2>
-      <p>Book a 30-minute demo with our team in Dubai. We will show the products that fit your business and talk through scope, timeline and cost.</p>
-      <div class="cta-actions">
-        <a class="btn btn-primary" href="mailto:sales@dnetsoft.com?subject=Demo%20request">Book a demo</a>
-        <a class="btn btn-secondary" href="/pricing-calculator">See pricing calculator</a>
+  <section id="contact" class="final-cta bg-paper" aria-labelledby="cta-title">
+    <div class="wrap">
+      <h2 id="cta-title">See it running on <em class="serif">your</em> Dynamics 365</h2>
+      <div>
+        <p class="lede">A 30-minute demo with our team in Dubai. We show the products that fit your business and talk through scope, timeline and cost.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="mailto:sales@dnetsoft.com?subject=Demo%20request">Book a demo</a>
+          <a class="btn btn-line" href="/pricing-calculator">See pricing calculator</a>
+        </div>
       </div>
     </div>
   </section>
@@ -644,16 +876,17 @@
 </main>
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
       <div>
-        <p class="footer-title">Dynamic Netsoft (DNT)</p>
+        <p class="footer-brand" aria-hidden="true">DN<span>T</span></p>
         <address>
+          Dynamic Netsoft<br>
           [VERIFY] Office address<br>
           Dubai, United Arab Emirates<br>
-          Phone: <a href="tel:+97140000000">+971 4 XXX XXXX</a><br>
-          Mobile: <a href="tel:+971500000000">+971 5X XXX XXXX</a><br>
-          Email: <a href="mailto:sales@dnetsoft.com">sales@dnetsoft.com</a> <span class="verify">[VERIFY]</span>
+          Phone <a href="tel:+97140000000">+971 4 XXX XXXX</a><br>
+          Mobile <a href="tel:+971500000000">+971 5X XXX XXXX</a><br>
+          <a href="mailto:sales@dnetsoft.com">sales@dnetsoft.com</a><span class="verify">[VERIFY]</span>
         </address>
       </div>
       <nav aria-label="Products">
@@ -688,7 +921,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; <span id="year">2026</span> Dynamic Netsoft. All rights reserved.</p>
-      <p>Redesign concept – not the live site.</p>
+      <p>Dubai · Riyadh · Chennai — redesign concept, not the live site.</p>
     </div>
   </div>
 </footer>
